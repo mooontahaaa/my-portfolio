@@ -3,64 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio | Muntaha</title>
+    <title>Muntaha | Professional Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* CSS STYLING */
-        :root { --primary: #2563eb; --dark: #1e293b; --light: #f8fafc; }
-        body { font-family: 'Inter', sans-serif; margin: 0; background: var(--light); color: var(--dark); line-height: 1.6; }
-        nav { background: white; padding: 1rem 10%; display: flex; justify-content: space-between; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; }
-        header { height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: white; }
-        section { padding: 4rem 10%; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
-        .card { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        :root {
+            --accent: #3b82f6;
+            --bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --section-bg: #f8fafc;
+        }
+
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            color: var(--text-main); 
+            background-color: var(--bg);
+            scroll-behavior: smooth;
+        }
+
         
-        /* FORM STYLING */
-        form { background: white; padding: 2rem; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-        .input-group { margin-bottom: 1.5rem; }
-        label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
-        input, textarea { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 5px; box-sizing: border-box; }
-        button { background: var(--primary); color: white; border: none; padding: 1rem 2rem; border-radius: 5px; cursor: pointer; width: 100%; font-size: 1rem; transition: 0.3s; }
-        button:hover { background: #1d4ed8; }
+        header {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 3.5rem; 
+            margin-bottom: 10px; 
+        }
+
+        .subtitle { 
+            font-size: 1.2rem; 
+            color: #94a3b8; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+        }
+
+        
+        section { padding: 80px 10%; }
+        h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.5rem; 
+            margin-bottom: 40px; 
+            text-align: center;
+        }
+
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--section-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+
+        /* Elegant Contact Form */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+
+        label { font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; display: block; }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 25px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: #fdfdfd;
+        }
+
+        button {
+            background: var(--text-main);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        button:hover { background: var(--accent); }
+
+        footer { text-align: center; padding: 40px; font-size: 0.9rem; color: var(--text-muted); }
     </style>
 </head>
 <body>
 
-<nav>
-    <strong>MyPortfolio</strong>
-    <div>
-        <a href="#about" style="margin-left:20px; text-decoration:none; color:black;">About</a>
-        <a href="#contact" style="margin-left:20px; text-decoration:none; color:black;">Contact</a>
-    </div>
-</nav>
-
 <header>
-    <h1>Hi, I'm Muntaha</h1>
-    <p>Welcome to my professional journey.</p>
+    <h1>Farjana Muntaha</h1>
+    <p class="subtitle">enjoys hunting new knowledge</p>
 </header>
 
 <section id="about">
-    <h2>About Me</h2>
-    <p>I am a CSE student. This portfolio showcases my commitment to excellence and my technical capabilities.</p>
+    <h2>The Professional Path</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>My Mission</h3>
+            <p>To blend technical excellence with elegant design, creating digital experiences that are as functional as they are beautiful.</p>
+        </div>
+        <div class="card">
+            <h3>Expertise</h3>
+            <p>Specializing in modern web technologies, responsive architecture, and user-centric design principles.</p>
+        </div>
+    </div>
 </section>
 
-<section id="contact">
-    <h2 style="text-align:center">Send Me a Message</h2>
-    <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
-        <div class="input-group">
-            <label>Full Name</label>
-            <input type="text" name="name" placeholder="John Doe" required>
-        </div>
-        <div class="input-group">
-            <label>Email Address</label>
-            <input type="email" name="_replyto" placeholder="email@example.com" required>
-        </div>
-        <div class="input-group">
-            <label>Message</label>
-            <textarea name="message" rows="5" placeholder="Your message here..." required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
+<section id="contact" style="background-color: var(--section-bg);">
+    <h2>Get In Touch</h2>
+    <form action="https://formspree.io/f/xqeeqvra" method="POST">
+        <label>NAME</label>
+        <input type="text" name="name" placeholder="Enter your name" required>
+        
+        <label>EMAIL</label>
+        <input type="email" name="email" placeholder="email@example.com" required>
+        
+        <label>MESSAGE</label>
+        <textarea name="message" rows="5" placeholder="How can I help you?" required></textarea>
+        
+        <button type="submit">SEND INQUIRY</button>
     </form>
 </section>
+
+<footer>
+    &copy; 2026 Farjana Muntaha. All rights reserved.
+</footer>
 
 </body>
 </html>
